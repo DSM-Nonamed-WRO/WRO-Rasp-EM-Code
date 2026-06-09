@@ -5,13 +5,12 @@ from flask import Flask, render_template, Response
 app = Flask(__name__)
 
 def GenerateFrames():
-    # mjpeg 포맷으로 실시간 데이터를 스트림(-) 출력합니다.
     cmd = [
         'rpicam-vid',
         '-t', '0', 
         '--inline', 
-        '--width', '640', 
-        '--height', '480', 
+        '--width', '1024', 
+        '--height', '768', 
         '--framerate', '25', 
         '--codec', 'mjpeg',
         '--flush',
