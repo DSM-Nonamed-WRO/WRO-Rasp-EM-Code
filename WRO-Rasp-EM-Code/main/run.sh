@@ -1,13 +1,19 @@
 #!/bin/bash
-# 1. 기존 카메라 찌꺼기 다 청소
-sudo killall -9 wro python3
+sudo killall -9 wro python3 rpicam-vid rpicam-still libcamera-vid 2>/dev/null
+sudo systemctl restart nvgettext 2>/dev/null
+rm -f /tmp/frame.jpg
+sleep 0.5
 
-# 2. C++ 프로그램 빌드
+cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code
+
+echo "C++ 컴파일 중..."
 g++ -O2 -o wro main.cpp $(pkg-config --cflags --libs opencv4)
 
-# 3. [핵심] C++ 프로그램을 백그라운드(&)로 실행 (바로 파이썬으로 넘어감)
+echo "C++ 프로그램 실행..."
 ./wro &
+libcamerify ./wro &
 
-# 4. 잠시 대기 후 Flask 서버 실행
-time.sleep(2)
+sleep 1.0
+
+echo "파이썬 Flask 스트리밍 서버 시작..."
 python3 stream.py

@@ -36,7 +36,8 @@ string decideDirection(const Mat& frame, const Mat& red_mask, const Mat& green_m
 }
 
 int main() {
-    VideoCapture cap(0);
+    string pipeline = "v4l2src device=/dev/video0 ! video/x-raw,width=640,height=480,framerate=30/1 ! videoconvert ! appsink";
+    VideoCapture cap(pipeline, CAP_GSTREAMER);
     if (!cap.isOpened()) {
         cerr << "카메라 열기 실패" << endl;
         return -1;
