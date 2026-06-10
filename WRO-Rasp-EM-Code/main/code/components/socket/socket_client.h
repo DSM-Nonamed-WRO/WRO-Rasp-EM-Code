@@ -2,20 +2,22 @@
 #define SOCKET_CLIENT_H
 
 #include <string>
+using namespace std;
 
 class SocketClient {
 private:
     int sock_fd;
-    std::string server_ip;
+    string server_ip;
     int server_port;
 
 public:
-    SocketClient(const std::string& ip, int port);
+    SocketClient(const string& ip, int port);
     ~SocketClient();
 
     bool connectToServer();
+    // only use recv
     bool sendData(const void* data, size_t size);
     void closeSocket();
 };
 
-#endif // SOCKET_CLIE_H
+#endif:
