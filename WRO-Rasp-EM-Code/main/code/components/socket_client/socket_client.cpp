@@ -23,7 +23,7 @@ bool SocketClient::connectToServer() {
   struct sockaddr_in server;
 
   // Iipv4 + port = AF_INET
-  socket_desc = socket(AF_INET, SOCK_DGRAM, 0);
+  socket_desc = socket(AF_INET, SOCK_STREAM, 1);
   if (socket_desc == 0) {
     cout << "Could nor create connect socket" << endl;
   }
