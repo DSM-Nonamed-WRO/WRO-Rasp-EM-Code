@@ -1,0 +1,6 @@
+/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles/wro.dir
+/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles/edit_cache.dir
+/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles/rebuild_cache.dir
+/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/components/socket_client/CMakeFiles/socket.dir
+/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/components/socket_client/CMakeFiles/edit_cache.dir
+/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/components/socket_client/CMakeFiles/rebuild_cache.dir

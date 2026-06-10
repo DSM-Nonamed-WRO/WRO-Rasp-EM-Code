@@ -2,6 +2,8 @@
 #define SOCKET_CLIENT_H
 
 #include <string>
+#include <vector>
+
 using namespace std;
 
 class SocketClient {
@@ -15,9 +17,8 @@ public:
     ~SocketClient();
 
     bool connectToServer();
-    // only use recv
-    bool sendData(const void* data, size_t size);
+    bool recvData(std::vector<unsigned char>& jpeg);
     void closeSocket();
 };
 
-#endif:
+#endif
