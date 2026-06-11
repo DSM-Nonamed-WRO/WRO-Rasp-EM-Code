@@ -80,8 +80,8 @@ bool SocketServer::sendAll(const uint8_t* data, size_t len) {
     ssize_t now = ::send(client_fd, data + sent, len - sent, 0);
     if (now <= 0) {
       return -1;
-      sent += now;
     }
+    sent += now;
   }
   return 0;
 }
