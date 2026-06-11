@@ -21,10 +21,10 @@ SocketServer::~SocketServer() {
 }
 
 bool SocketServer::socketServerInit() {
-  int socket_desc;
-  socket_desc = socket(AF_INET, SOCK_STREAM, 0);
-  if (socket_desc == -1) { 
-    return -1;
+  listen_fd = socket(AF_INET, SOCK_STREAM, 0);
+  if (listen_fd == -1) { 
+    perror("listen fd 받기 실패");
+    return false;
   }
 
   int opt = 1;
@@ -36,14 +36,16 @@ bool SocketServer::socketServerInit() {
   addr.sin_port = htons(server_port);
 
   if (bind(listen_fd, (sockaddr*)&addr, sizeof(addr)) < 0) {
-    return -1;
+    perror("bind");
+    return false;
   }
 
   if (listen(listen_fd, 1) < 0) {
-    return -1;
+    perror("listen");
+    return false;
   }
   
-  return 0;
+  return true;
 }
 
 bool SocketServer::socketServerWaitClient() {
@@ -59,19 +61,19 @@ bool SocketServer::socketServerSendFrame(const Mat& frame) {
   };
 
   if (!imencode(".jpg", frame, buf, params)) {
-    return -1;
+    return false;
   }
 
   uint32_t len = htonl(static_cast<uint32_t>(buf.size()));
   if (!sendAll(reinterpret_cast<uint8_t*>(&len), sizeof(len))) {
-    return -1;
+    return false;
   }
 
   if (!sendAll(buf.data(), buf.size())) {
-    return -1;
+    return false;
   }
 
-  return 0;
+  return true;
 }
 
 bool SocketServer::sendAll(const uint8_t* data, size_t len) {
@@ -79,11 +81,11 @@ bool SocketServer::sendAll(const uint8_t* data, size_t len) {
   while (sent < len) {
     ssize_t now = ::send(client_fd, data + sent, len - sent, 0);
     if (now <= 0) {
-      return -1;
+      return false;
     }
     sent += now;
   }
-  return 0;
+  return true;
 }
 
 pair<Mat, Mat> detectColor(const Mat& frame) {

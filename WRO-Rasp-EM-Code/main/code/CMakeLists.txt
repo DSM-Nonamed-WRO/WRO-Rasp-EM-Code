@@ -6,7 +6,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(OpenCV 4 REQUIRED)
 
-add_subdirectory(components/socket_client)
 add_subdirectory(components/socket_server)
 
 add_executable(

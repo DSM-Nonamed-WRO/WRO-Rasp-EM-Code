@@ -44,7 +44,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/components/socket_client/cmake_install.cmake")
   include("/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/components/socket_server/cmake_install.cmake")
 
 endif()
