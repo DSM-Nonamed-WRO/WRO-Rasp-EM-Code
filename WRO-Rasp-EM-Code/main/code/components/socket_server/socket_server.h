@@ -2,6 +2,8 @@
 #define SOCKET_SERVER_H
 
 #include <iostream>
+#include <stdint.h>
+#include <opencv2/opencv.hpp>
 
 using namespace std;
 using namespace cv;
@@ -22,5 +24,5 @@ public:
   bool socketServerWaitClient();
   bool socketServerSendFrame(const Mat& frame);
   void run();
-}
+};
 #endif

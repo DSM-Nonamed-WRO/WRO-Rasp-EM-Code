@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/components/socket_server -isystem /usr/include/opencv4
+CXX_INCLUDES = -I/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/components/socket_client
 
 CXX_FLAGS = -std=gnu++17
 

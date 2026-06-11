@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.31.6/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.31.6/CMakeSystem.cmake"
   "/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/components/socket_client/CMakeLists.txt"
+  "/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/components/socket_server/CMakeLists.txt"
   "/usr/lib/aarch64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake"
   "/usr/lib/aarch64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake"
   "/usr/lib/aarch64-linux-gnu/cmake/opencv4/OpenCVModules-release.cmake"
@@ -51,10 +52,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "components/socket_client/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "components/socket_server/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/wro.dir/DependInfo.cmake"
-  "components/socket_client/CMakeFiles/socket.dir/DependInfo.cmake"
+  "components/socket_client/CMakeFiles/socket_client.dir/DependInfo.cmake"
+  "components/socket_server/CMakeFiles/socket_server.dir/DependInfo.cmake"
   )

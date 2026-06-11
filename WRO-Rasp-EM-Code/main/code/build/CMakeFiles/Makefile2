@@ -65,31 +65,35 @@ CMAKE_BINARY_DIR = /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build
 # The main recursive "all" target.
 all: CMakeFiles/wro.dir/all
 all: components/socket_client/all
+all: components/socket_server/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/wro.dir/codegen
 codegen: components/socket_client/codegen
+codegen: components/socket_server/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
 preinstall: components/socket_client/preinstall
+preinstall: components/socket_server/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/wro.dir/clean
 clean: components/socket_client/clean
+clean: components/socket_server/clean
 .PHONY : clean
 
 #=============================================================================
 # Directory level rules for directory components/socket_client
 
 # Recursive "all" directory target.
-components/socket_client/all: components/socket_client/CMakeFiles/socket.dir/all
+components/socket_client/all: components/socket_client/CMakeFiles/socket_client.dir/all
 .PHONY : components/socket_client/all
 
 # Recursive "codegen" directory target.
-components/socket_client/codegen: components/socket_client/CMakeFiles/socket.dir/codegen
+components/socket_client/codegen: components/socket_client/CMakeFiles/socket_client.dir/codegen
 .PHONY : components/socket_client/codegen
 
 # Recursive "preinstall" directory target.
@@ -97,17 +101,36 @@ components/socket_client/preinstall:
 .PHONY : components/socket_client/preinstall
 
 # Recursive "clean" directory target.
-components/socket_client/clean: components/socket_client/CMakeFiles/socket.dir/clean
+components/socket_client/clean: components/socket_client/CMakeFiles/socket_client.dir/clean
 .PHONY : components/socket_client/clean
+
+#=============================================================================
+# Directory level rules for directory components/socket_server
+
+# Recursive "all" directory target.
+components/socket_server/all: components/socket_server/CMakeFiles/socket_server.dir/all
+.PHONY : components/socket_server/all
+
+# Recursive "codegen" directory target.
+components/socket_server/codegen: components/socket_server/CMakeFiles/socket_server.dir/codegen
+.PHONY : components/socket_server/codegen
+
+# Recursive "preinstall" directory target.
+components/socket_server/preinstall:
+.PHONY : components/socket_server/preinstall
+
+# Recursive "clean" directory target.
+components/socket_server/clean: components/socket_server/CMakeFiles/socket_server.dir/clean
+.PHONY : components/socket_server/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/wro.dir
 
 # All Build rule for target.
-CMakeFiles/wro.dir/all: components/socket_client/CMakeFiles/socket.dir/all
+CMakeFiles/wro.dir/all: components/socket_server/CMakeFiles/socket_server.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/wro.dir/build.make CMakeFiles/wro.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/wro.dir/build.make CMakeFiles/wro.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles --progress-num=3,4 "Built target wro"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles --progress-num=5,6 "Built target wro"
 .PHONY : CMakeFiles/wro.dir/all
 
 # Build rule for subdir invocation for target.
@@ -124,7 +147,7 @@ wro: CMakeFiles/wro.dir/rule
 # codegen rule for target.
 CMakeFiles/wro.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/wro.dir/build.make CMakeFiles/wro.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles --progress-num=3,4 "Finished codegen for target wro"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles --progress-num=5,6 "Finished codegen for target wro"
 .PHONY : CMakeFiles/wro.dir/codegen
 
 # clean rule for target.
@@ -133,36 +156,68 @@ CMakeFiles/wro.dir/clean:
 .PHONY : CMakeFiles/wro.dir/clean
 
 #=============================================================================
-# Target rules for target components/socket_client/CMakeFiles/socket.dir
+# Target rules for target components/socket_client/CMakeFiles/socket_client.dir
 
 # All Build rule for target.
-components/socket_client/CMakeFiles/socket.dir/all:
-	$(MAKE) $(MAKESILENT) -f components/socket_client/CMakeFiles/socket.dir/build.make components/socket_client/CMakeFiles/socket.dir/depend
-	$(MAKE) $(MAKESILENT) -f components/socket_client/CMakeFiles/socket.dir/build.make components/socket_client/CMakeFiles/socket.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles --progress-num=1,2 "Built target socket"
-.PHONY : components/socket_client/CMakeFiles/socket.dir/all
+components/socket_client/CMakeFiles/socket_client.dir/all:
+	$(MAKE) $(MAKESILENT) -f components/socket_client/CMakeFiles/socket_client.dir/build.make components/socket_client/CMakeFiles/socket_client.dir/depend
+	$(MAKE) $(MAKESILENT) -f components/socket_client/CMakeFiles/socket_client.dir/build.make components/socket_client/CMakeFiles/socket_client.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles --progress-num=1,2 "Built target socket_client"
+.PHONY : components/socket_client/CMakeFiles/socket_client.dir/all
 
 # Build rule for subdir invocation for target.
-components/socket_client/CMakeFiles/socket.dir/rule: cmake_check_build_system
+components/socket_client/CMakeFiles/socket_client.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/socket_client/CMakeFiles/socket.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/socket_client/CMakeFiles/socket_client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles 0
-.PHONY : components/socket_client/CMakeFiles/socket.dir/rule
+.PHONY : components/socket_client/CMakeFiles/socket_client.dir/rule
 
 # Convenience name for target.
-socket: components/socket_client/CMakeFiles/socket.dir/rule
-.PHONY : socket
+socket_client: components/socket_client/CMakeFiles/socket_client.dir/rule
+.PHONY : socket_client
 
 # codegen rule for target.
-components/socket_client/CMakeFiles/socket.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f components/socket_client/CMakeFiles/socket.dir/build.make components/socket_client/CMakeFiles/socket.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles --progress-num=1,2 "Finished codegen for target socket"
-.PHONY : components/socket_client/CMakeFiles/socket.dir/codegen
+components/socket_client/CMakeFiles/socket_client.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f components/socket_client/CMakeFiles/socket_client.dir/build.make components/socket_client/CMakeFiles/socket_client.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles --progress-num=1,2 "Finished codegen for target socket_client"
+.PHONY : components/socket_client/CMakeFiles/socket_client.dir/codegen
 
 # clean rule for target.
-components/socket_client/CMakeFiles/socket.dir/clean:
-	$(MAKE) $(MAKESILENT) -f components/socket_client/CMakeFiles/socket.dir/build.make components/socket_client/CMakeFiles/socket.dir/clean
-.PHONY : components/socket_client/CMakeFiles/socket.dir/clean
+components/socket_client/CMakeFiles/socket_client.dir/clean:
+	$(MAKE) $(MAKESILENT) -f components/socket_client/CMakeFiles/socket_client.dir/build.make components/socket_client/CMakeFiles/socket_client.dir/clean
+.PHONY : components/socket_client/CMakeFiles/socket_client.dir/clean
+
+#=============================================================================
+# Target rules for target components/socket_server/CMakeFiles/socket_server.dir
+
+# All Build rule for target.
+components/socket_server/CMakeFiles/socket_server.dir/all:
+	$(MAKE) $(MAKESILENT) -f components/socket_server/CMakeFiles/socket_server.dir/build.make components/socket_server/CMakeFiles/socket_server.dir/depend
+	$(MAKE) $(MAKESILENT) -f components/socket_server/CMakeFiles/socket_server.dir/build.make components/socket_server/CMakeFiles/socket_server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles --progress-num=3,4 "Built target socket_server"
+.PHONY : components/socket_server/CMakeFiles/socket_server.dir/all
+
+# Build rule for subdir invocation for target.
+components/socket_server/CMakeFiles/socket_server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/socket_server/CMakeFiles/socket_server.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles 0
+.PHONY : components/socket_server/CMakeFiles/socket_server.dir/rule
+
+# Convenience name for target.
+socket_server: components/socket_server/CMakeFiles/socket_server.dir/rule
+.PHONY : socket_server
+
+# codegen rule for target.
+components/socket_server/CMakeFiles/socket_server.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f components/socket_server/CMakeFiles/socket_server.dir/build.make components/socket_server/CMakeFiles/socket_server.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles --progress-num=3,4 "Finished codegen for target socket_server"
+.PHONY : components/socket_server/CMakeFiles/socket_server.dir/codegen
+
+# clean rule for target.
+components/socket_server/CMakeFiles/socket_server.dir/clean:
+	$(MAKE) $(MAKESILENT) -f components/socket_server/CMakeFiles/socket_server.dir/build.make components/socket_server/CMakeFiles/socket_server.dir/clean
+.PHONY : components/socket_server/CMakeFiles/socket_server.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

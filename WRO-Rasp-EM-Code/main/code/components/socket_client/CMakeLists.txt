@@ -1,10 +1,10 @@
 add_library(
-    socket
+    socket_client
     socket_client.cpp
 )
 
 target_include_directories(
-    socket
+    socket_client
     PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}
 )

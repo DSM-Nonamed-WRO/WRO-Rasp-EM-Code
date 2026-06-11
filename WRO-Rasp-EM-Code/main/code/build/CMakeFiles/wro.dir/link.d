@@ -3,7 +3,7 @@ wro: \
   /usr/lib/gcc/aarch64-linux-gnu/14/../../../aarch64-linux-gnu/crti.o \
   /usr/lib/gcc/aarch64-linux-gnu/14/crtbeginS.o \
   CMakeFiles/wro.dir/main.cpp.o \
-  components/socket_client/libsocket.a \
+  components/socket_server/libsocket_server.a \
   /usr/lib/aarch64-linux-gnu/libopencv_stitching.so.4.10.0 \
   /usr/lib/aarch64-linux-gnu/libopencv_alphamat.so.4.10.0 \
   /usr/lib/aarch64-linux-gnu/libopencv_aruco.so.4.10.0 \
@@ -40,16 +40,16 @@ wro: \
   /usr/lib/aarch64-linux-gnu/libopencv_wechat_qrcode.so.4.10.0 \
   /usr/lib/aarch64-linux-gnu/libopencv_xobjdetect.so.4.10.0 \
   /usr/lib/aarch64-linux-gnu/libopencv_xphoto.so.4.10.0 \
+  /usr/lib/aarch64-linux-gnu/libopencv_phase_unwrapping.so.4.10.0 \
+  /usr/lib/aarch64-linux-gnu/libopencv_optflow.so.4.10.0 \
   /usr/lib/aarch64-linux-gnu/libopencv_highgui.so.4.10.0 \
   /usr/lib/aarch64-linux-gnu/libopencv_datasets.so.4.10.0 \
   /usr/lib/aarch64-linux-gnu/libopencv_plot.so.4.10.0 \
   /usr/lib/aarch64-linux-gnu/libopencv_text.so.4.10.0 \
   /usr/lib/aarch64-linux-gnu/libopencv_ml.so.4.10.0 \
-  /usr/lib/aarch64-linux-gnu/libopencv_phase_unwrapping.so.4.10.0 \
-  /usr/lib/aarch64-linux-gnu/libopencv_optflow.so.4.10.0 \
+  /usr/lib/aarch64-linux-gnu/libopencv_videoio.so.4.10.0 \
   /usr/lib/aarch64-linux-gnu/libopencv_ximgproc.so.4.10.0 \
   /usr/lib/aarch64-linux-gnu/libopencv_video.so.4.10.0 \
-  /usr/lib/aarch64-linux-gnu/libopencv_videoio.so.4.10.0 \
   /usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.4.10.0 \
   /usr/lib/aarch64-linux-gnu/libopencv_objdetect.so.4.10.0 \
   /usr/lib/aarch64-linux-gnu/libopencv_calib3d.so.4.10.0 \
@@ -367,7 +367,7 @@ wro: \
 
 CMakeFiles/wro.dir/main.cpp.o:
 
-components/socket_client/libsocket.a:
+components/socket_server/libsocket_server.a:
 
 /usr/lib/aarch64-linux-gnu/libopencv_stitching.so.4.10.0:
 
@@ -441,6 +441,10 @@ components/socket_client/libsocket.a:
 
 /usr/lib/aarch64-linux-gnu/libopencv_xphoto.so.4.10.0:
 
+/usr/lib/aarch64-linux-gnu/libopencv_phase_unwrapping.so.4.10.0:
+
+/usr/lib/aarch64-linux-gnu/libopencv_optflow.so.4.10.0:
+
 /usr/lib/aarch64-linux-gnu/libopencv_highgui.so.4.10.0:
 
 /usr/lib/aarch64-linux-gnu/libopencv_datasets.so.4.10.0:
@@ -451,15 +455,11 @@ components/socket_client/libsocket.a:
 
 /usr/lib/aarch64-linux-gnu/libopencv_ml.so.4.10.0:
 
-/usr/lib/aarch64-linux-gnu/libopencv_phase_unwrapping.so.4.10.0:
-
-/usr/lib/aarch64-linux-gnu/libopencv_optflow.so.4.10.0:
+/usr/lib/aarch64-linux-gnu/libopencv_videoio.so.4.10.0:
 
 /usr/lib/aarch64-linux-gnu/libopencv_ximgproc.so.4.10.0:
 
 /usr/lib/aarch64-linux-gnu/libopencv_video.so.4.10.0:
-
-/usr/lib/aarch64-linux-gnu/libopencv_videoio.so.4.10.0:
 
 /usr/lib/aarch64-linux-gnu/libopencv_imgcodecs.so.4.10.0:
 

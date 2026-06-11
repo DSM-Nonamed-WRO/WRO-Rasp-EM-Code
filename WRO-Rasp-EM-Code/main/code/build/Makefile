@@ -130,17 +130,30 @@ wro/fast:
 .PHONY : wro/fast
 
 #=============================================================================
-# Target rules for targets named socket
+# Target rules for targets named socket_client
 
 # Build rule for target.
-socket: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 socket
-.PHONY : socket
+socket_client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 socket_client
+.PHONY : socket_client
 
 # fast build rule for target.
-socket/fast:
-	$(MAKE) $(MAKESILENT) -f components/socket_client/CMakeFiles/socket.dir/build.make components/socket_client/CMakeFiles/socket.dir/build
-.PHONY : socket/fast
+socket_client/fast:
+	$(MAKE) $(MAKESILENT) -f components/socket_client/CMakeFiles/socket_client.dir/build.make components/socket_client/CMakeFiles/socket_client.dir/build
+.PHONY : socket_client/fast
+
+#=============================================================================
+# Target rules for targets named socket_server
+
+# Build rule for target.
+socket_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 socket_server
+.PHONY : socket_server
+
+# fast build rule for target.
+socket_server/fast:
+	$(MAKE) $(MAKESILENT) -f components/socket_server/CMakeFiles/socket_server.dir/build.make components/socket_server/CMakeFiles/socket_server.dir/build
+.PHONY : socket_server/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -174,7 +187,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... socket"
+	@echo "... socket_client"
+	@echo "... socket_server"
 	@echo "... wro"
 	@echo "... main.o"
 	@echo "... main.i"

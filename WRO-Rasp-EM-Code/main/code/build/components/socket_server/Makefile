@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/components/socket_client//CMakeFiles/progress.marks
-	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/socket_client/all
+	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/components/socket_server//CMakeFiles/progress.marks
+	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/socket_server/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/socket_client/clean
+	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/socket_server/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,12 +103,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/socket_client/preinstall
+	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/socket_server/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/socket_client/preinstall
+	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/socket_server/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -117,42 +117,42 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-components/socket_client/CMakeFiles/socket_client.dir/rule:
-	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/socket_client/CMakeFiles/socket_client.dir/rule
-.PHONY : components/socket_client/CMakeFiles/socket_client.dir/rule
+components/socket_server/CMakeFiles/socket_server.dir/rule:
+	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 components/socket_server/CMakeFiles/socket_server.dir/rule
+.PHONY : components/socket_server/CMakeFiles/socket_server.dir/rule
 
 # Convenience name for target.
-socket_client: components/socket_client/CMakeFiles/socket_client.dir/rule
-.PHONY : socket_client
+socket_server: components/socket_server/CMakeFiles/socket_server.dir/rule
+.PHONY : socket_server
 
 # fast build rule for target.
-socket_client/fast:
-	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(MAKE) $(MAKESILENT) -f components/socket_client/CMakeFiles/socket_client.dir/build.make components/socket_client/CMakeFiles/socket_client.dir/build
-.PHONY : socket_client/fast
+socket_server/fast:
+	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(MAKE) $(MAKESILENT) -f components/socket_server/CMakeFiles/socket_server.dir/build.make components/socket_server/CMakeFiles/socket_server.dir/build
+.PHONY : socket_server/fast
 
-socket_client.o: socket_client.cpp.o
-.PHONY : socket_client.o
+socket_server.o: socket_server.cpp.o
+.PHONY : socket_server.o
 
 # target to build an object file
-socket_client.cpp.o:
-	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(MAKE) $(MAKESILENT) -f components/socket_client/CMakeFiles/socket_client.dir/build.make components/socket_client/CMakeFiles/socket_client.dir/socket_client.cpp.o
-.PHONY : socket_client.cpp.o
+socket_server.cpp.o:
+	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(MAKE) $(MAKESILENT) -f components/socket_server/CMakeFiles/socket_server.dir/build.make components/socket_server/CMakeFiles/socket_server.dir/socket_server.cpp.o
+.PHONY : socket_server.cpp.o
 
-socket_client.i: socket_client.cpp.i
-.PHONY : socket_client.i
+socket_server.i: socket_server.cpp.i
+.PHONY : socket_server.i
 
 # target to preprocess a source file
-socket_client.cpp.i:
-	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(MAKE) $(MAKESILENT) -f components/socket_client/CMakeFiles/socket_client.dir/build.make components/socket_client/CMakeFiles/socket_client.dir/socket_client.cpp.i
-.PHONY : socket_client.cpp.i
+socket_server.cpp.i:
+	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(MAKE) $(MAKESILENT) -f components/socket_server/CMakeFiles/socket_server.dir/build.make components/socket_server/CMakeFiles/socket_server.dir/socket_server.cpp.i
+.PHONY : socket_server.cpp.i
 
-socket_client.s: socket_client.cpp.s
-.PHONY : socket_client.s
+socket_server.s: socket_server.cpp.s
+.PHONY : socket_server.s
 
 # target to generate assembly for a file
-socket_client.cpp.s:
-	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(MAKE) $(MAKESILENT) -f components/socket_client/CMakeFiles/socket_client.dir/build.make components/socket_client/CMakeFiles/socket_client.dir/socket_client.cpp.s
-.PHONY : socket_client.cpp.s
+socket_server.cpp.s:
+	cd /home/wro/wro_project/WRO-Rasp-EM-Code/main/code/build && $(MAKE) $(MAKESILENT) -f components/socket_server/CMakeFiles/socket_server.dir/build.make components/socket_server/CMakeFiles/socket_server.dir/socket_server.cpp.s
+.PHONY : socket_server.cpp.s
 
 # Help Target
 help:
@@ -162,10 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... socket_client"
-	@echo "... socket_client.o"
-	@echo "... socket_client.i"
-	@echo "... socket_client.s"
+	@echo "... socket_server"
+	@echo "... socket_server.o"
+	@echo "... socket_server.i"
+	@echo "... socket_server.s"
 .PHONY : help
 
 
