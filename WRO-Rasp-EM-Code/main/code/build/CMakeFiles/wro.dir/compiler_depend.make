@@ -777,10 +777,8 @@ wro: /lib/aarch64-linux-gnu/libGLX.so.0 \
   /usr/lib/gcc/aarch64-linux-gnu/14/libgcc_s.so \
   /usr/lib/gcc/aarch64-linux-gnu/14/libstdc++.so \
   CMakeFiles/wro.dir/main.cpp.o \
-  components/socket/libsocket.a
+  components/socket_client/libsocket.a
 
-
-components/socket/libsocket.a:
 
 /usr/lib/gcc/aarch64-linux-gnu/14/libgcc.a:
 
@@ -1967,6 +1965,8 @@ CMakeFiles/wro.dir/main.cpp.o:
 /lib/aarch64-linux-gnu/libdc1394.so.25:
 
 /usr/include/opencv4/opencv2/core/optim.hpp:
+
+components/socket_client/libsocket.a:
 
 /usr/include/c++/14/bits/allocated_ptr.h:
 
